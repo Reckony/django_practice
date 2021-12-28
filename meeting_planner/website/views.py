@@ -7,7 +7,8 @@ from meetings.models import Meeting
 
 def welcome(request):
     return render(request, "website/welcome.html",
-                  {"num_meetings": Meeting.objects.count()})
+                  {"num_meetings": Meeting.objects.count(),
+                   "meetings": Meeting.objects.all()})
 
 
 def date(request):
@@ -21,3 +22,5 @@ def about(request):
         I am Software Engineer who is eager to develop coding skills, now building this small app using Django ;) \n
         """
     )
+
+
