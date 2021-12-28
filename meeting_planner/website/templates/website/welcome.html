@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>Welcome to Meeting Planner</h1>
+    <p>
+        This is an app for learning purposes.
+        <em>Django: Getting Started</em>
+        on <a href="https://www.pluralsight.com"> Pluralsight</a>
+    </p>
+    <p>
+        {% if num_meetings == 0 %}
+        List of meetings is empty.
+        {% elif num_meetings == 1 %}
+        There is currently {{num_meetings}} meeting in the database.
+        {% else %}
+        There are currently {{num_meetings}} meetings in the database.
+        {% endif %}
+    </p>
+</body>
+</html>
